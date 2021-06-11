@@ -7,7 +7,7 @@ export CC=mpicc
 source /opt/rh/devtoolset-7/enable
 
 cmake3 \
-    -DCMAKE_CXX_FLAGS="-g -O2 -std=c++11 -fopenmp -fopenmp-simd"  \
+    -DCMAKE_CXX_FLAGS="-g -O2 -std=c++11 -DNEON -fopenmp -fopenmp-simd"  \
     -DCMAKE_INSTALL_PREFIX=/opt/chroma/double \
     -DMG_DEFAULT_LOGLEVEL=DEBUG3 \
     -DQMP_DIR="/opt/chroma/double/" \

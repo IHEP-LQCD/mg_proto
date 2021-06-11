@@ -40,14 +40,14 @@
 #include <immintrin.h>
 #endif
 
-// XXX NEED TO CHECK
 #ifdef NEON
+// XXX NEED TO CHECK VECLEN
 #define VECLEN	4
+#include "avx2neon.h"
+#define MG_USE_AVX512
 #endif
 
 #define VECLEN2 (VECLEN/2)
-
-
 
 namespace MG {
 
