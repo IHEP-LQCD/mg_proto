@@ -16,9 +16,18 @@
 #endif
 
 #include "MG_config.h"
+
+#ifdef MG_USE_QPHIX
 #include <lattice/qphix/qphix_veclen.h>
 #include <lattice/coarse/coarse_types.h>
 #include "lattice/qphix/qphix_types.h"
+#else
+// XXX FOR OPENMP SIMD. NEED TO CHECK
+#define VECLEN_SP 4
+#define VECLEN_HP 4
+#define VECLEN_DP 2
+#endif
+
 #include <lattice/coarse/block.h>
 #include <utils/print_utils.h>
 

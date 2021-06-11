@@ -14,6 +14,9 @@
 #undef SSE
 #undef AVX2
 #undef AVX
+#undef NEON
+
+#define VECLEN 4
 
 #ifdef  SSE
 #define VECLEN 4  // SSE
@@ -37,7 +40,11 @@
 #include <immintrin.h>
 #endif
 
-#define VECLEN 4
+// XXX NEED TO CHECK
+#ifdef NEON
+#define VECLEN	4
+#endif
+
 #define VECLEN2 (VECLEN/2)
 
 
