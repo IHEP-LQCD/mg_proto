@@ -50,6 +50,8 @@
 
 using namespace MG;
 using namespace MGTesting;
+
+#include "qdp.h"
 using namespace QDP;
 
 
