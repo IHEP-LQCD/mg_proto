@@ -109,6 +109,7 @@ if( VTUNE_DIR )
   LIST(APPEND EXT_LIBS "-L${VTUNE_DIR}/lib64 -littnotify")
 endif()
 
+
 if( FAKE_COMMS )
    message(STATUS "Setting FAKE_COMMS")
    set( MG_FAKE_COMMS TRUE)
@@ -138,6 +139,12 @@ if( MG_USE_QDPXX )
   		set( MG_QMP_COMMS TRUE )
 	endif(${QDPXX_PARALLEL_ARCH} STREQUAL "parscalar" )
 endif(MG_USE_QDPXX)
+
+if( IPM_DIR )
+  SET( MG_USE_IPM)
+  message(STATUS "Using IPM ${IPM_DIR}")
+  LIST(APPEND EXT_LIBS "-L${IPM_DIR}/lib -lipm")
+endif()
 
 # Deal with threads 
 find_package(Threads REQUIRED)
