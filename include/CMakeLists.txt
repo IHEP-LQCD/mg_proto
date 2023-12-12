@@ -1,8 +1,10 @@
 install (FILES lattice/array2d.h
 			   lattice/cmat_mult.h
+			   lattice/coloring.h
 			   lattice/constants.h
 			   lattice/givens.h
 			   lattice/fgmres_common.h 
+			   lattice/eigs_common.h 
 			   lattice/geometry_utils.h   
 			   lattice/invfgmres_generic.h
          	   lattice/lattice_info.h 
@@ -20,6 +22,7 @@ install (FILES lattice/array2d.h
 install (FILES lattice/coarse/aggregate_block_coarse.h
                lattice/coarse/block.h
                lattice/coarse/coarse_l1_blas.h
+               lattice/coarse/coarse_deflation.h
                lattice/coarse/coarse_op.h
                lattice/coarse/coarse_types.h 
                lattice/coarse/coarse_transfer.h
@@ -35,9 +38,10 @@ install (FILES lattice/coarse/aggregate_block_coarse.h
          
 install (FILES utils/initialize.h
 			   utils/memory.h 
-         utils/timer.h
+			   utils/timer.h
 			   utils/print_utils.h
 			   utils/avx512_to_neon.h 
+               utils/auxiliary.h
 		 DESTINATION include/utils)
 		 
 install (FILES lattice/fine_qdpxx/aggregate_block_qdpxx.h
@@ -64,6 +68,7 @@ install (FILES lattice/qphix/qphix_types.h
 						   lattice/qphix/qphix_clover_linear_operator.h
 						   lattice/qphix/qphix_eo_clover_linear_operator.h
 						   lattice/qphix/qphix_blas_wrappers.h
+						   lattice/qphix/qphix_mgdeflation.h
 						   lattice/qphix/invfgmres_qphix.h
 						   lattice/qphix/invbicgstab_qphix.h
 						   lattice/qphix/invmr_qphix.h
@@ -71,6 +76,7 @@ install (FILES lattice/qphix/qphix_types.h
 						   lattice/qphix/qphix_aggregate.h
 						   lattice/qphix/qphix_transfer.h
 						   lattice/qphix/vcycle_qphix_coarse.h
+						   lattice/qphix/qphix_ali.h
 						   lattice/qphix/vcycle_recursive_qphix.h
 				 DESTINATION include/lattice/qphix)
 				 
