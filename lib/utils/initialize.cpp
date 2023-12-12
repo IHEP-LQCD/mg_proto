@@ -42,16 +42,12 @@ namespace MG {
 #endif
     }
 
-<<<<<<< HEAD
 #ifdef MG_USE_QPHIX
 	void InitCLIArgs(int *argc, char ***argv)
 	{
 	  theCLIArgs.init(*argc,*argv);
 	}
 #endif
-=======
-    void InitCLIArgs(int *argc, char ***argv) { theCLIArgs.init(*argc, *argv); }
->>>>>>> f1bf54be37333e59a8ba2ea80c3e5c5df26c7330
 
     void initialize(int *argc, char ***argv) {
         if (!isInitializedP) {
